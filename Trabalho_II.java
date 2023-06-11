@@ -33,21 +33,22 @@ public class Trabalho_II{
 
 		for(int a = 0; a < 26; a++){	
 			for(int j = aux; j < phraseCoded.length(); j++){
-				if(countTamValue == phraseDiscoded.length()){
-					System.out.printf("Achei a palavra, numero de posicoes: %d\n", countValueCoded);
-					printPhraseDiscoded(countValueCoded, phraseCoded);
-					return;
-				}
-				
 				numberAsciiCoded = phraseCoded.charAt(j);
 				
 				numberAsciiDiscoded = phraseDiscoded.charAt(i) + countValueCoded;
 				
 				if(numberAsciiCoded == numberAsciiDiscoded){
 					countTamValue++;
-					i++;	
+					i++;
+					
+					if(countTamValue == phraseDiscoded.length()){
+						System.out.printf("Achei a palavra, numero de posicoes: %d\n", countValueCoded);
+						printPhraseDiscoded(countValueCoded, phraseCoded);
+						return;
+					}
+					
 					continue;
-				}		
+				}
 				countTamValue = 0;
 				i = 0;
 			}
