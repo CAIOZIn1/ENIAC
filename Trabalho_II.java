@@ -46,7 +46,6 @@ public class Trabalho_II{
 						printPhraseDiscoded(countValueCoded, phraseCoded);
 						return;
 					}
-					
 					continue;
 				}
 				countTamValue = 0;
